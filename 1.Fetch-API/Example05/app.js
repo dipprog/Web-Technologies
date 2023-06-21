@@ -32,7 +32,12 @@ document.getElementById("btn").addEventListener("click", makerequest);
 
 
 // Async Await Post Data
-async function makerequest() {
+async function makerequest(event) {
+    event.preventDefault()
+    let title = document.getElementById("title").value
+    let body = document.getElementById("body").value
+    let userid = document.getElementById("userId").value
+    let reactions = document.getElementById("reactions").value
     console.log("Button clicked!");
     try{    
         const response = await fetch("https://dummyjson.com/posts/add", {
@@ -41,10 +46,10 @@ async function makerequest() {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                "title": "Fetch API1",
-                "body": "I just love fetch API1",
-                "userId": 11,
-                "reactions": 10
+                "title": title,
+                "body": body,
+                "userId": userid,
+                "reactions": reactions
             })
         })
         if(!response.ok) {
