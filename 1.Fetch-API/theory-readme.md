@@ -33,7 +33,9 @@ Overall, the restaurant ordering process provides a relatable analogy for unders
   Syntax:- `fetch(resource, init)`
   
   `resource` - This defines the resources that we wish to fetch. It can be URL object, Request Object and URL of resource.
-  `init(optional)` - - `method`: The request method, e.g., GET, POST - `headers`: Headers object or an object literal with ByteString values - `body`: Blob, BufferSource, FormData, URLSearchParams, USVString, or ReadableStream object. Note that a request using GET or HEAD method cannot have a body. - `mode`: The mode we want to use for the request, e.g., cors, no-cors or same-origin - `credentials` - `cache` - Example:
+  `init(optional)` - - `method`: The request method, e.g., GET, POST - `headers`: Headers object or an object literal with ByteString values - `body`: Blob, BufferSource, FormData, URLSearchParams, USVString, or ReadableStream object. Note that a request using GET or HEAD method cannot have a body. - `mode`: The mode we want to use for the request, e.g., cors, no-cors or same-origin - `credentials` - `cache`
+
+  - Example:
   `javascript
     fetch("https://example.com/post", {
         method: "POST",
