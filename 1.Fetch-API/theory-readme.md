@@ -34,7 +34,9 @@ Overall, the restaurant ordering process provides a relatable analogy for unders
   
   `resource` - This defines the resources that we wish to fetch. It can be URL object, Request Object and URL of resource.
   `init(optional)` - - `method`: The request method, e.g., GET, POST - `headers`: Headers object or an object literal with ByteString values - `body`: Blob, BufferSource, FormData, URLSearchParams, USVString, or ReadableStream object. Note that a request using GET or HEAD method cannot have a body. - `mode`: The mode we want to use for the request, e.g., cors, no-cors or same-origin - `credentials` - `cache` - Example:
-  `javascript
+
+
+  ```javascript
     fetch("https://example.com/post", {
         method: "POST",
         headers: {
@@ -44,7 +46,8 @@ Overall, the restaurant ordering process provides a relatable analogy for unders
         body: body,
         cache: "default"
     });
-    `
+    ```
+  
 - `Body.arrayBuffer()` - It returns a promise that resolves with an ArrayBuffer representation of the request body.
 - `Body.blob()`- Returns a promise that resolves with a Blob representation of the request body.
 - `Body.formData()`- Returns a promise that resolves with a FormData respresentation of the request body. -`Body.json()`- Returns a promise that resolves with a JSON respresentation of the request body. -`Body.text()`- Returns a promise that resolves with a USVString(text) respresentation of the request body.
